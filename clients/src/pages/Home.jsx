@@ -1,48 +1,48 @@
-import React from 'react';
-import logo from '../assets/logo.png'
-import { useNavigate } from 'react-router';
+
+
+import React from "react";
+import logo from "../assets/logo.png";
+import { useNavigate } from "react-router";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const WelcomePage = () => {
-    
-    const navigate=useNavigate()
-    const started=()=>{
-        navigate('/login')
-    }
-    return (
-        <div className=" bg-white flex items-center justify-center">
-            <div className="w-full max-w-4xl p-8  shadow-lg rounded-xl">
-                {/* Logo Section */}
-                <div className="flex items-center space-x-3 mb-6">
-                    <img src={logo} alt="TSEEP Academy" className="w-[255.51px] h-[100.45px] mt-[26px] ml-[7px]" />
+  const navigate = useNavigate();
+  const started = () => {
+    navigate("/login");
+  };
 
-                </div>
-
-                {/* Welcome Text */}
-                <div className='w-[1128px] h-[135.46px] mt-[322px] ml-[92px]'>
-                    <h1 className=' fw-600'>
-                        Welcome to <span className="text-yellow-500">TSEEP Mastery Box</span>
-                    </h1>
-                    <p className="text-gray-500 text-lg ">
-                        Unlock your potential with <span className="font-bold">AI inspired tool</span>
-                    </p>
-                </div>
-
-                {/* Checkbox and Button Section */}
-                <div className="mt-6">
-                    <label className="flex items-center space-x-2 text-gray-600">
-                        <input type="checkbox" className="form-checkbox" />
-                        <span>
-                            I confirm that I have read and accept the terms and conditions
-                            and privacy policy.
-                        </span>
-                    </label>
-
-                    <button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700" onClick={started}>
-                        Get Started
-                    </button>
-                </div>
-            </div>
+  return (
+    <div className="container d-flex justify-content-center align-items-center min-vh-100 bg-light">
+      <div className="card p-5 shadow-lg text-center w-75">
+        {/* Logo Section */}
+        <div className="mb-4">
+          <img src={logo} alt="TSEEP Academy" className="img-fluid" style={{ maxWidth: "250px" }} />
         </div>
-    );
+
+        {/* Welcome Text */}
+        <div className="mb-4">
+          <h1 className="fw-bold">
+            Welcome to <span className="text-warning">TSEEP Mastery Box</span>
+          </h1>
+          <p className="text-secondary fs-5">
+            Unlock your potential with <span className="fw-bold">AI-inspired tools</span>
+          </p>
+        </div>
+
+        {/* Checkbox and Button Section */}
+        <div className="form-check d-flex justify-content-center mb-3">
+          <input type="checkbox" className="form-check-input me-2" id="terms" />
+          <label className="form-check-label text-secondary" htmlFor="terms">
+            I confirm that I have read and accept the terms and conditions and privacy policy.
+          </label>
+        </div>
+
+        <button className="btn btn-dark px-5 py-2" onClick={started}>
+          Get Started
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default WelcomePage;
