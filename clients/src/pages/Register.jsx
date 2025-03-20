@@ -9,7 +9,6 @@ const Register = () => {
         name: "",
         email: "",
         password: "",
-        photo: "",
         status: "",
         phone: ""
     });
@@ -90,13 +89,13 @@ const Register = () => {
                         </div>
 
                         <div className="space-y-4">
-                            <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-600">Phone Number</label>
+                            <label htmlFor="phone" className="block text-sm font-medium text-gray-600">Phone Number</label>
                             <input
                                 type="tel"
-                                id="phoneNumber"
-                                name="phoneNumber"
+                                id="phone"
+                                name="phone"
                                 placeholder="Enter your phone number"
-                                value={formData.phoneNumber}
+                                value={formData.phone}
                                 onChange={handleInputChange}
                                 className="w-full h-[52.35px] border-[1.68px] border-gray-300 rounded-[5.35px] p-2 text-gray-700 focus:outline-none"
                             />

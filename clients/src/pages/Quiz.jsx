@@ -147,7 +147,7 @@ function Quiz() {
                     <label key={option} className="list-group-item d-flex align-items-center">
                       <input
                         type="radio"
-                        className="form-check-input me-2"
+                        className="form-check-input me-2 bg-primary"
                         name={`question-${currentQuestion}`}
                         checked={answers[currentQuestion] === option}
                         onChange={() => handleAnswer(option)}
